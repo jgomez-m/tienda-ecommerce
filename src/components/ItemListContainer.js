@@ -1,11 +1,13 @@
 import React from 'react'
+import ItemCount from './ItemCount'
 
 const ItemListContainer = (props) => {
     return (
-        <div>
+        <>
             <h2>Este es el Container</h2>
-            {props.greeting}
-        </div>
+            <ItemCount stock={0} initial={1} 
+                onAdd={(num) => window.alert(`Productos agregados: ${num}`)} />
+        </>
     )
 }
 

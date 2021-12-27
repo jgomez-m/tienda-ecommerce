@@ -52,9 +52,6 @@ const ItemListContainer = () => {
         ) :
         (
         <div>
-            {/* <ItemCount stock={10} initial={1} 
-                onAdd={(num) => window.alert(`Productos agregados: ${num}`)} 
-            /> */}
             <ItemList items={items} />
         </div>
         )

@@ -5,7 +5,7 @@
         "description": "Auto deportivo gris",
         "price": "$ 30.000",
         "category": "deportivos",
-        "url": "audi_r8.jpg"
+        "url": "/img/audi-a3.jpg"
     },
     {
         "id": "2",
@@ -13,22 +13,22 @@
         "description": "Auto deportivo Negro",
         "price": "$ 45.000",
         "category": "deportivos",
-        "url": "audi_r8.jpg"
+        "url": "/img/audi-r8.jpg"
     },
     {
         "id": "3",
-        "title": "Camioneta 1",
-        "description": "Description",
-        "price": "500",
+        "title": "Audi Q4",
+        "description": "Camioneta Negra",
+        "price": "$ 48.000",
         "category": "camionetas",
-        "url": "audi_r8.jpg"
+        "url": "/img/audi-q4.jpg"
     },
     {
         "id": "4",
-        "title": "Camioneta 2",
-        "description": "Description",
-        "price": "500",
+        "title": "Audi Q5",
+        "description": "Camioneta azul",
+        "price": "$ 50.000",
         "category": "camionetas",
-        "url": "audi_r8.jpg"
+        "url": "/img/audi-q5.jpg"
     }
 ]

@@ -3,6 +3,7 @@ import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
@@ -10,10 +11,11 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<ItemListContainer />} />
+        <Route path="/" element={<ItemListContainer />} />
         <Route path="/cart" element={<ItemCount stock={10} initial={1} 
-                onAdd={(num) => window.alert(`Productos agregados: ${num}`)} />}  
-        />
+                onAdd={(num) => window.alert(`Productos agregados: ${num}`)} />} />
+        <Route path="/category/:categoryName" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
       </Routes>
     </div>
     </BrowserRouter>

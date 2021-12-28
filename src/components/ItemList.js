@@ -1,11 +1,16 @@
 import React from 'react'
 import Item from './Item'
+import { Container, StyledLink } from './Styles'
 
 const ItemList = ({ items }) => {
     return (
-        <div>
-            {items.map(item => <Item key={item.id} item={item} />)}
-        </div>
+        <Container>
+            {items.map(item => 
+            <StyledLink to={`/item/${item.id}`} key={item.id} >
+                <Item key={item.id} item={item} />
+            </StyledLink>
+            )}
+        </Container>
     )
 }
 

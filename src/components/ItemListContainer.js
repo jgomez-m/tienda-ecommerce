@@ -24,7 +24,7 @@ const ItemListContainer = () => {
         .catch(error => {
             console.log(`Este fue el error: ${error}`);
         });
-    },[]);
+    },[categoryName]);
 
     return (
         loading ? 

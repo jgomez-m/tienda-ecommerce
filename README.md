@@ -3,7 +3,8 @@
 Tech stack used:
 - bootstrap: 5.0.2
 - React: 17.0.2
-- Jest Dom: 5.15.1
+- styled components: 5.3.3
+- react spinners: 0.11.0
 
 ## Getting Started with Create React App
 

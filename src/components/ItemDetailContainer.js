@@ -24,16 +24,18 @@ const ItemDetailContainer = () => {
         })
         
         getItem.then((products) => {
-            console.log("Productos: ", products)
-            const item = products.find((product) => product.id === id)
-            setItem(item)
-            setLoading(false)
+            setTimeout(() => {
+                console.log("Productos: ", products)
+                const item = products.find((product) => product.id === id)
+                setItem(item)
+                setLoading(false)
+            }, 500);
         })
         .catch(error => {
             console.log(`Este fue el error: ${error}`);
         });
 
-    },[id]);
+    },[]);
     
     return (
         loading ? 

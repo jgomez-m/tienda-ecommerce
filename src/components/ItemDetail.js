@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 
 const ItemDetail = ( {item} ) => {
     return (
@@ -8,7 +7,6 @@ const ItemDetail = ( {item} ) => {
             <img src={item.url} style={{height: 250}} alt='Imagen'/>
             <p>{item.description}</p>
             <p>{item.price}</p>
-            <ItemCount />
         </>
     )
 }

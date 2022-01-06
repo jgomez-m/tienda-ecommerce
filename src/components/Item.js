@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title, Description, Price } from './Styles'
+import { Title, Price } from './Styles'
 
 
 const Item = ({ item }) => {

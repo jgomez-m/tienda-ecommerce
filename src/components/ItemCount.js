@@ -17,14 +17,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <h2>{`Count: ${count}`}</h2>
                 <button onClick={() => updateCount(count + 1)}> + </button>
             </div>
-            <button style={{marginTop: '20px'}} onClick={() => {
-                if(stock >0){
-                    onAdd(count)
-                }
-                else {
-                    //Disable button
-                } 
-            }}>Agregar al carrito</button>
+            <button style={{marginTop: '20px'}} 
+                onClick={() => onAdd(count)}
+                disabled={count < 1}>
+                    Agregar al carrito
+            </button>
         </div>
     )
 

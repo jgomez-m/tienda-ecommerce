@@ -14,9 +14,8 @@ const ItemDetailContainer = () => {
 
     const [loading, setLoading] = useState(true);
     const [item, setItem] = useState();
-    const color = "#ffffff";
-    const { id } = useParams();
-    
+    const params = useParams();
+
     useEffect(() => {
         const getItem = fetch('../products.json')
         .then((res) => {
@@ -26,7 +25,7 @@ const ItemDetailContainer = () => {
         getItem.then((products) => {
             setTimeout(() => {
                 console.log("Productos: ", products)
-                const item = products.find((product) => product.id === id)
+                const item = products.find((product) => product.id === params.id)
                 setItem(item)
                 setLoading(false)
             }, 500);
@@ -41,7 +40,7 @@ const ItemDetailContainer = () => {
         loading ? 
         (
         <div>
-            <ClipLoader color={color} loading={loading} css={override} size={60} />
+            <ClipLoader loading={loading} css={override} size={60} />
         </div>
         ) : (
             <div>

@@ -7,7 +7,7 @@ const Item = ({ item }) => {
     return (
         <div key={item.id} style={{margin: 20}}>
             <Title>{item.title}</Title>
-            <Price>{item.price}</Price>
+            <Price>$ {item.price}</Price>
         </div>
     )
 }

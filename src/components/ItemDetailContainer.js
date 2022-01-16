@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
         .catch(error => {
             console.log(`Este fue el error: ${error}`);
         });
-
+        // eslint-disable-next-line
     },[]);
     
     return (

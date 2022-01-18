@@ -30,7 +30,7 @@ const ItemDetail = ( {item} ) => {
                     <Link 
                         to='/cart' 
                         onClick={() => finalizarCompra()}>
-                        <button>Finalizar Compra</button>
+                        <button>Terminar Compra</button>
                     </Link>
                 </div>
             )}

@@ -1,7 +1,7 @@
 # Tienda Ecommerce
 
 Tech stack used:
-- bootstrap: 5.0.2
+- bootstrap: 5.1.3
 - React: 17.0.2
 - styled components: 5.3.3
 - react spinners: 0.11.0

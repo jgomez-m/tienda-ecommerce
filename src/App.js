@@ -1,10 +1,15 @@
 import './App.css';
+import './styles.css';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import CacheProvider from './context/CacheProvider';
+library.add(fas);//Fontawesome icons 
 
 function App() {
   return (

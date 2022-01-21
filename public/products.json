@@ -3,7 +3,7 @@
         "id": "1",
         "title": "Audi A3",
         "description": "Auto deportivo gris",
-        "price": "30000",
+        "price": 30000,
         "category": "deportivos",
         "url": "/img/audi-a3.jpg",
         "stock": 5 
@@ -12,7 +12,7 @@
         "id": "2",
         "title": "Audi R8",
         "description": "Auto deportivo Negro",
-        "price": "45000",
+        "price": 45000,
         "category": "deportivos",
         "url": "/img/audi-r8.jpg",
         "stock": 5
@@ -21,7 +21,7 @@
         "id": "3",
         "title": "Audi Q4",
         "description": "Camioneta Negra",
-        "price": "48000",
+        "price": 48000,
         "category": "camionetas",
         "url": "/img/audi-q4.jpg",
         "stock": 5
@@ -30,7 +30,7 @@
         "id": "4",
         "title": "Audi Q5",
         "description": "Camioneta azul",
-        "price": "50000",
+        "price": 50000,
         "category": "camionetas",
         "url": "/img/audi-q5.jpg",
         "stock": 5

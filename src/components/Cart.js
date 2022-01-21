@@ -16,7 +16,7 @@ const Cart = () => {
             </Link>
         </>) :
         (<>
-            {cart.map(e => <ItemCart element={e} /> )}
+            {cart.map(e => <ItemCart key={e.id} element={e} /> )}
             <h2>Cantidad total de Productos: {itemsAmount()}</h2>
             <p>Precio total: $ {totalPrice()}</p>
             <button onClick={() => clear()}>Vaciar Carrito</button>

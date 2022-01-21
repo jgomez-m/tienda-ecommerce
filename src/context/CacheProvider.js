@@ -33,7 +33,6 @@ const CacheProvider = ({ children } ) => {
         else {
             setCart([...cart, {item, quantity}])            
         }
-        console.log("Carrito de compras: ", cart)
     }
 
     const removeItem = (id) => {

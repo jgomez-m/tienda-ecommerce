@@ -3,7 +3,8 @@ import { css } from '@emotion/react';
 import ClipLoader from 'react-spinners/ClipLoader';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-import { collection, getDocs} from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore';
+import db from '../firebase/config';
 
 const override = css`
   display: block;
@@ -18,22 +19,15 @@ const ItemDetailContainer = () => {
     const params = useParams();
 
     useEffect(() => {
-        const getItem = fetch('../products.json')
-        .then((res) => {
-            return res.json()
-        })
-        
-        getItem.then((products) => {
-            setTimeout(() => {
-                console.log("Productos: ", products)
-                const item = products.find((product) => product.id === params.id)
-                setItem(item)
+        const getItem = async() => {
+            const snapShot = await getDoc(doc(db, 'product-list', params.id))
+            if (snapShot.exists()) {
+                setItem({...snapShot.data(), id: snapShot.id})
                 setLoading(false)
-            }, 500);
-        })
-        .catch(error => {
-            console.log(`Este fue el error: ${error}`);
-        });
+                console.log("Item", item)
+            }
+        }
+        getItem()
         // eslint-disable-next-line
     },[]);
     

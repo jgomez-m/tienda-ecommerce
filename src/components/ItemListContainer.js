@@ -22,7 +22,7 @@ const ItemListContainer = () => {
             })
             setItems(itemsFromFirestore)
             setLoading(false)
-            console.log("items:", itemsFromFirestore)
+            // console.log("items:", itemsFromFirestore)
         }
         loadData()
 

@@ -24,7 +24,6 @@ const ItemDetailContainer = () => {
             if (snapShot.exists()) {
                 setItem({...snapShot.data(), id: snapShot.id})
                 setLoading(false)
-                console.log("Item", item)
             }
         }
         getItem()

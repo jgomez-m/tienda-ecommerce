@@ -40,7 +40,7 @@ export const BuyerForm = () => {
         try{ 
             const docRef = await addDoc(collection(db, "orders"), orderData)
             setOrderId(docRef.id)
-            console.log("Document Id: ", docRef.id)
+            // console.log("Document Id: ", docRef.id)
             clear()
         } 
         catch(e) {

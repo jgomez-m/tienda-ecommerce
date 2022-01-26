@@ -72,18 +72,18 @@ export const BuyerForm = () => {
     };
 
     return (
-        <div className="container aligned-items" style={{width: '40%'}}>
+        <div className="container" style={{width: '50%'}}>
       {orderId !== '' ? (
         <Order id={orderId}></Order>
       ) : (
         <>
-          <span className="p-3">
+          <span className="row col-sm m-2">
             <h3 className="font-weight-bold"> Ingrese sus datos por favor</h3>
           </span>
 
           <form>
-            <div className="p-2 " >
-              <label htmlFor="fname" className="p-1">
+            <div className="row" >
+              <label htmlFor="fname" className="col-sm m-2">
                 Nombre completo
               </label>
               <input
@@ -91,11 +91,11 @@ export const BuyerForm = () => {
                 onChange={handleInputName}
                 id="lname"
                 name="lname"
-                className="p-1"
+                className="col-sm m-2"
               />
             </div>
-            <div className="p-2">
-              <label htmlFor="email" className="p-1">
+            <div className="row">
+              <label htmlFor="email" className="col-sm m-2">
                 Email
               </label>
               <input
@@ -103,11 +103,11 @@ export const BuyerForm = () => {
                 onChange={handleInputEmail}
                 id="lname"
                 name="email"
-                className="p-1"
+                className="col-sm m-2"
               />
             </div>
-            <div className="p-2">
-              <label htmlFor="phone-number" className="p-1">
+            <div className="row">
+              <label htmlFor="phone-number" className="col-sm m-2">
                 Número de teléfono
               </label>
               <input
@@ -115,16 +115,16 @@ export const BuyerForm = () => {
                 onChange={handleInputPhoneNumber}
                 id="phone-number"
                 name="lname"
-                className="p-1"
+                className="col-sm m-2"
               />
             </div>
           </form>
 
           <h6>
-            <button className="button-style-1" onClick={() => validateFields()}>
+            <button className="col-sm m-2" onClick={() => validateFields()}>
                 Crear Orden de Compra
             </button>
-            <p className="font-weight-bold"> {validMsg}</p>
+            <p className='col-sm font-weight-bold m-3' style={{color: 'red'}}> {validMsg}</p>
           </h6>
         </>
       )}

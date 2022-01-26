@@ -20,6 +20,11 @@ const Cart = () => {
             <h2>Cantidad total de Productos: {itemsAmount()}</h2>
             <p>Precio total: $ {totalPrice()}</p>
             <button onClick={() => clear()}>Vaciar Carrito</button>
+            <Link to="/buyerform">
+              <button className="">
+                <span>Confirmar compra</span>
+              </button>
+            </Link>
         </>)
     )
 }

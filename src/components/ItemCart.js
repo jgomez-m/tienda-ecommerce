@@ -8,8 +8,7 @@ const ItemCart = ({ element }) => {
 
     return (
         <div
-            className="row m-3 cart-container align-items-center justify-content-between"
-            key={item.id}
+            className="row m-3 cart-container align-items-center justify-content-between"            
         >
             <div className=" col-md-3 col-lg-3 ">
                 <h6 className="item-name">{item.title}</h6>

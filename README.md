@@ -31,7 +31,7 @@ Se utilizaron varion conceptos básicos y avanzados de React como:
 - creacion de componentes padres e hijos
 - useState, useEffect, useParams
 
-## Pasos para iniciar la aplicacion
+## Pasos para iniciar la aplicacion localmente
 
 1. Se debe crear un archivo `.env` en la raiz del proyecto para usar la base de datos de Firebase y correrlo localmente, con el siguiente contenido:
 
@@ -44,3 +44,7 @@ REACT_APP_APP_ID=1:554641226612:web:22450c0f41c6461e140a21
 REACT_APP_MEASUREMENT_ID=G-3ZN39PDYJC`
 
 2. Correr el comando: `npm start`
+
+## Link de aplicacion desplegada
+
+[Audi Ecommerce](https://ecommerce-audi.netlify.app/)

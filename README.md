@@ -1,38 +1,28 @@
 # Tienda Ecommerce
 
 Tech stack used:
-- bootstrap: 5.0.2
+- bootstrap: 5.1.3
 - React: 17.0.2
 - styled components: 5.3.3
 - react spinners: 0.11.0
 
-## Getting Started with Create React App
+Este proyecto fue basado en la App de create react App: [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Funcionalidades
 
-## Available Scripts
+- Ver todos los productos.
+- Filtrar productos por categorias (automoviles, camionetas).
+- Agregar varias unidades del mismo producto.
+- Tiene una memoria local para guardar los productos agregados.
+- Crear ordenes de compra luego de llenar datos personales.
 
-In the project directory, you can run:
+## Metodología utilizada
 
-### `npm start`
+Este proyecto es el resultado de un curso de 2 meses que se realizo sobre React con la academia Coderhouse (https://www.coderhouse.com).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Se fueron agregando funcionalidades progresivamente, entre cada clase. (se crearon ramas para cada una)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se utilizaron varion conceptos básicos y avanzados de React como:
+- state and props
+- creacion de componentes padres e hijos
+- useState y useEffect

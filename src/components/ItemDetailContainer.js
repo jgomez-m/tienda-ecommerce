@@ -3,6 +3,8 @@ import { css } from '@emotion/react';
 import ClipLoader from 'react-spinners/ClipLoader';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import db from '../firebase/config';
 
 const override = css`
   display: block;
@@ -14,34 +16,25 @@ const ItemDetailContainer = () => {
 
     const [loading, setLoading] = useState(true);
     const [item, setItem] = useState();
-    const color = "#ffffff";
-    const { id } = useParams();
-    
-    useEffect(() => {
-        const getItem = fetch('../products.json')
-        .then((res) => {
-            return res.json()
-        })
-        
-        getItem.then((products) => {
-            setTimeout(() => {
-                console.log("Productos: ", products)
-                const item = products.find((product) => product.id === id)
-                setItem(item)
-                setLoading(false)
-            }, 500);
-        })
-        .catch(error => {
-            console.log(`Este fue el error: ${error}`);
-        });
+    const params = useParams();
 
+    useEffect(() => {
+        const getItem = async() => {
+            const snapShot = await getDoc(doc(db, 'product-list', params.id))
+            if (snapShot.exists()) {
+                setItem({...snapShot.data(), id: snapShot.id})
+                setLoading(false)
+            }
+        }
+        getItem()
+        // eslint-disable-next-line
     },[]);
     
     return (
         loading ? 
         (
         <div>
-            <ClipLoader color={color} loading={loading} css={override} size={60} />
+            <ClipLoader loading={loading} css={override} size={60} />
         </div>
         ) : (
             <div>

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
 	return (
 		<div>
-			<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand">
 						<img src={logo} className="App-logo" alt="logo" />
@@ -27,7 +27,7 @@ const NavBar = () => {
 							</li>
 						</ul>
 					</div>
-					<Link to={'/cart'}><CartWidget /></Link>
+					<CartWidget />
 				</div>
 			</nav>
 		</div>

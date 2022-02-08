@@ -1,24 +1,35 @@
 import './App.css';
+import './styles.css';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ItemCount from './components/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart';
+import CacheProvider from './context/CacheProvider';
+import { BuyerForm } from './components/BuyerForm';
+
+library.add(fas);//Fontawesome icons 
+
 
 function App() {
   return (
-    <BrowserRouter>
-    <div className="App">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/cart" element={<ItemCount stock={10} initial={1} 
-                onAdd={(num) => window.alert(`Productos agregados: ${num}`)} />} />
-        <Route path="/category/:categoryName" element={<ItemListContainer />} />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-      </Routes>
-    </div>
-    </BrowserRouter>
+    <CacheProvider >
+      <BrowserRouter>
+          <div className="App">
+            <header> <NavBar /> </header>
+              <Routes>
+                  <Route path="/" element={<ItemListContainer />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/category/:categoryName" element={<ItemListContainer />} />
+                  <Route path="/item/:id" element={<ItemDetailContainer />} />
+                  <Route path="/buyerform" element={<BuyerForm />} />          
+              </Routes>
+          </div>
+      </BrowserRouter>
+    </CacheProvider>
   );
 }
 

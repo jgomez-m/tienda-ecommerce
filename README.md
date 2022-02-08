@@ -1,3 +1,5 @@
+<img src="https://firebasestorage.googleapis.com/v0/b/tienda-ecommerce-e853c.appspot.com/o/demo%20tienda.gif?alt=media&token=c0fa9035-c8c8-4a4a-a0f6-d8253ff14320" alt="Gif animado" />
+
 # Tienda Ecommerce
 
 ## Tecnologías utilizadas:

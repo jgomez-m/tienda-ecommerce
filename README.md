@@ -6,8 +6,6 @@ Tech stack used:
 - styled components: 5.3.3
 - react spinners: 0.11.0
 
-## Getting Started with Create React App
-
 Este proyecto fue basado en la App de create react App: [Create React App](https://github.com/facebook/create-react-app).
 
 ## Funcionalidades

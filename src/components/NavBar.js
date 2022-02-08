@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from '../img/logo.svg';
 import CartWidget from './CartWidget';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
 	return (
 		<div>
-			<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand">
 						<img src={logo} className="App-logo" alt="logo" />
@@ -22,8 +22,8 @@ const NavBar = () => {
 							<li className="nav-item">
 								<Link to="/category/deportivos" className="nav-link active" >Deportivos</Link>
 							</li>
-							<li className="nav-item">
-								<Link to="/category/camionetas" className="nav-link active" >Camionetas</Link>
+							<li className="">
+								<NavLink to="/category/camionetas" className="nav-link active" >Camionetas</NavLink>
 							</li>
 						</ul>
 					</div>

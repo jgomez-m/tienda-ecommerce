@@ -10,7 +10,6 @@ const CartWidget = () => {
         <Link
             to={`/cart`}
             className="b-w-hover text-no-wrap no-text-decoration mr-3 p-1"
-            activeclassname="selected-link"
             id="cart-icon-b">
                 {itemsAmount() > 0 && <span>{itemsAmount()}</span>}
                 <FontAwesomeIcon icon={["fas", "shopping-cart"]} />

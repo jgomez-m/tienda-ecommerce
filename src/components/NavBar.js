@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../img/logo.svg';
 import CartWidget from './CartWidget';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 	return (
@@ -22,8 +22,8 @@ const NavBar = () => {
 							<li className="nav-item">
 								<Link to="/category/deportivos" className="nav-link active" >Deportivos</Link>
 							</li>
-							<li className="">
-								<NavLink to="/category/camionetas" className="nav-link active" >Camionetas</NavLink>
+							<li className="nav-item">
+								<Link to="/category/camionetas" className="nav-link active" >Camionetas</Link>
 							</li>
 						</ul>
 					</div>
